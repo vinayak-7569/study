@@ -1,0 +1,182 @@
+ /* General reset and body styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+    padding: 0 20px;
+}
+
+/* Container that holds the timer */
+.container {
+    text-align: center;
+    padding: 30px;
+    background-color: #fff;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    max-width: 400px;
+    width: 100%;
+    margin: 20px;
+    animation: fadeIn 0.8s ease-out;
+}
+
+h2 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 15px;
+    animation: slideInTop 1s ease-out;
+}
+
+label {
+    font-size: 16px;
+    color: #555;
+}
+
+input[type="number"] {
+    width: 80%;
+    padding: 12px;
+    font-size: 18px;
+    margin-top: 10px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    outline: none;
+    margin-bottom: 20px;
+    text-align: center;
+    animation: fadeInUp 0.6s ease-out;
+}
+
+input[type="number"]:focus {
+    border-color: #4CAF50;
+}
+
+/* Timer display styling */
+#timer {
+    font-size: 50px;
+    font-weight: bold;
+    color: #333;
+    margin: 20px 0;
+    padding: 15px 25px;
+    background-color: #f1f1f1;
+    border-radius: 12px;
+    width: fit-content;
+    margin-bottom: 25px;
+    animation: timerFadeIn 1s ease-in-out;
+}
+
+/* Button styling */
+button {
+    padding: 14px 30px;
+    font-size: 16px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    margin: 10px;
+    transition: transform 0.2s, background-color 0.3s ease;
+    animation: fadeInUp 0.8s ease-out;
+}
+
+button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+button#startButton {
+    background-color: #4CAF50;
+    color: white;
+}
+
+button#startButton:hover {
+    background-color: #45a049;
+    transform: scale(1.05);
+}
+
+button#pauseButton {
+    background-color: #f39c12;
+    color: white;
+}
+
+button#pauseButton:hover {
+    background-color: #e67e22;
+    transform: scale(1.05);
+}
+
+button#resetButton {
+    background-color: #e74c3c;
+    color: white;
+}
+
+button#resetButton:hover {
+    background-color: #c0392b;
+    transform: scale(1.05);
+}
+
+/* Animation effect for timer updates */
+@keyframes timerFadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes slideInTop {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Button hover effect */
+button:hover {
+    transform: scale(1.1);
+}
+
+/* Animation for the entire page when it loads */
+@keyframes pageLoad {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+body {
+    animation: pageLoad 1s ease-out;
+}
